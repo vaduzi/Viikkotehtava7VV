@@ -1,0 +1,12 @@
+﻿FROM node:8
+
+WORKDIR /Käyttäjät/Valtteri Veijalainen/VT/express-locallibrary-tutorial
+
+COPY app.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
+CMD [ "npm", "start" ]
